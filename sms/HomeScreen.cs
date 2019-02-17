@@ -26,8 +26,69 @@ namespace sms
 
         private void classesBtn_Click(object sender, EventArgs e)
         {
-            Classes cl = new Classes();
-            main.showWindow(cl, this, MDI.ActiveForm);
+            Classes st = new Classes();
+            main.showWindow(st, this, MDI.ActiveForm);
+        }
+
+        private void sectionBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void voucherBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void housesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timetableBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notificationBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void attendanceBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subjectBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rolesBtn_Click(object sender, EventArgs e)
+        {
+            Roles st = new Roles();
+            main.showWindow(st, this, MDI.ActiveForm);
         }
     }
 }

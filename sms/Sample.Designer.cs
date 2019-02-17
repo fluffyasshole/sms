@@ -31,10 +31,10 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.rightPanel.SuspendLayout();
@@ -72,6 +72,17 @@
             this.panel3.Size = new System.Drawing.Size(234, 40);
             this.panel3.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 40);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // rightPanel
             // 
             this.rightPanel.Controls.Add(this.panel5);
@@ -102,21 +113,11 @@
             this.panel4.Size = new System.Drawing.Size(1091, 40);
             this.panel4.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(126, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Sample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1325, 653);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.leftPanel);

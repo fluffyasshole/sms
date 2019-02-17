@@ -38,9 +38,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.backBtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.leftPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.rightPanel.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -66,6 +68,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.panel2);
             this.panel6.Size = new System.Drawing.Size(234, 590);
             // 
             // panel5
@@ -202,6 +205,14 @@
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(234, 50);
+            this.panel2.TabIndex = 0;
+            // 
             // Sample2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -212,6 +223,7 @@
             this.leftPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Panel panel2;
     }
 }
