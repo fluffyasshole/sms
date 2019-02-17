@@ -20,7 +20,7 @@ namespace sms
         MainClass main = new MainClass();
         private void MDI_Load(object sender, EventArgs e)
         {
-            if (File.Exists(main.path + "\\cnt"))
+            if (File.Exists(MainClass.path + "\\cnt"))
             {
                 Login obj = new Login();
                 obj.MdiParent = this;

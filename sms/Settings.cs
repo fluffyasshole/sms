@@ -17,8 +17,6 @@ namespace sms
         {
             InitializeComponent();
         }
-        MainClass main = new MainClass();
-
         private void saveBtn_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
@@ -33,12 +31,12 @@ namespace sms
                 else
                 {
                     sb.Append("Data Source=" + datasourceTxt.Text + ";Initial Catlog" + dbTxt.Text + ";Integerated Security = true; MultipleActiveResultSets=true" );
-                    File.WriteAllText(main.path + "\\cnt", sb.ToString());
+                    File.WriteAllText(MainClass.path + "\\cnt", sb.ToString());
                     DialogResult dr = MessageBox.Show("Settings saved sucessfully","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dr == DialogResult.OK)
                     {
                         Login log = new Login();
-                        main.showWindow(log, this,MDI.ActiveForm);
+                        MainClass.showWindow(log, this,MDI.ActiveForm);
                     }
                 }
             }
@@ -56,13 +54,13 @@ namespace sms
             else
             {
                     sb.Append("Data Source=" + datasourceTxt.Text + ";Initial Catlog" + dbTxt.Text + "; User ID=" + usernameTxt.Text + "; Password=" + passTxt.Text + ";MultipleActiveResultSets=true");
-                    File.WriteAllText(main.path + "\\cnt", sb.ToString());
-                    File.WriteAllText(main.path + "\\cnt", sb.ToString());
+                    File.WriteAllText(MainClass.path + "\\cnt", sb.ToString());
+                    File.WriteAllText(MainClass.path + "\\cnt", sb.ToString());
                     DialogResult dr = MessageBox.Show("Settings saved sucessfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (dr == DialogResult.OK)
                     {
                         Login log = new Login();
-                        main.showWindow(log, this, MDI.ActiveForm);
+                        MainClass.showWindow(log, this, MDI.ActiveForm);
                     }
                 }
             }

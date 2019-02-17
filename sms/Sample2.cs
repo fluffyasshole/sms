@@ -45,13 +45,10 @@ namespace sms
         {
 
         }
-
-        MainClass main = new MainClass();
-
         private void backBtn_Click(object sender, EventArgs e)
         {
             HomeScreen hs = new HomeScreen();
-            main.showWindow(hs, this, MDI.ActiveForm);
+            MainClass.showWindow(hs, this, MDI.ActiveForm);
         }
     }
 }

@@ -30,93 +30,125 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.nameTxt = new System.Windows.Forms.TextBox();
+            this.usernameTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PasswordTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cpassTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.phone2Txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.statusCBTxt = new System.Windows.Forms.ComboBox();
+            this.roleCBTxt = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.BrowseBtn = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.phoneTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.nameErrorLabel = new System.Windows.Forms.Label();
+            this.usernameErrorLabel = new System.Windows.Forms.Label();
+            this.passErrorLabel = new System.Windows.Forms.Label();
+            this.cpassErrorLabel = new System.Windows.Forms.Label();
+            this.phone1ErrorLabel = new System.Windows.Forms.Label();
+            this.phone2ErrorLabel = new System.Windows.Forms.Label();
+            this.roleErrorLabel = new System.Windows.Forms.Label();
+            this.statusErrorLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.mismatchedErrorLabel = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // leftPanel
             // 
-            this.leftPanel.Size = new System.Drawing.Size(234, 633);
+            this.leftPanel.Size = new System.Drawing.Size(234, 747);
             // 
             // rightPanel
             // 
-            this.rightPanel.Size = new System.Drawing.Size(1081, 633);
+            this.rightPanel.Size = new System.Drawing.Size(870, 747);
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(1081, 40);
+            this.panel4.Size = new System.Drawing.Size(870, 40);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.mismatchedErrorLabel);
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Controls.Add(this.statusErrorLabel);
+            this.panel6.Controls.Add(this.roleErrorLabel);
+            this.panel6.Controls.Add(this.phone2ErrorLabel);
+            this.panel6.Controls.Add(this.phone1ErrorLabel);
+            this.panel6.Controls.Add(this.cpassErrorLabel);
+            this.panel6.Controls.Add(this.passErrorLabel);
+            this.panel6.Controls.Add(this.usernameErrorLabel);
+            this.panel6.Controls.Add(this.nameErrorLabel);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.textBox7);
             this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.phoneTxt);
             this.panel6.Controls.Add(this.BrowseBtn);
-            this.panel6.Controls.Add(this.comboBox2);
+            this.panel6.Controls.Add(this.roleCBTxt);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.statusCBTxt);
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Controls.Add(this.phone2Txt);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.cpassTxt);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.textBox3);
+            this.panel6.Controls.Add(this.PasswordTxt);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.usernameTxt);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.nameTxt);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.panel2);
-            this.panel6.Size = new System.Drawing.Size(234, 593);
+            this.panel6.Size = new System.Drawing.Size(234, 707);
             this.panel6.Controls.SetChildIndex(this.panel2, 0);
             this.panel6.Controls.SetChildIndex(this.label2, 0);
-            this.panel6.Controls.SetChildIndex(this.textBox1, 0);
+            this.panel6.Controls.SetChildIndex(this.nameTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label3, 0);
-            this.panel6.Controls.SetChildIndex(this.textBox2, 0);
+            this.panel6.Controls.SetChildIndex(this.usernameTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label4, 0);
-            this.panel6.Controls.SetChildIndex(this.textBox3, 0);
+            this.panel6.Controls.SetChildIndex(this.PasswordTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label5, 0);
-            this.panel6.Controls.SetChildIndex(this.textBox4, 0);
+            this.panel6.Controls.SetChildIndex(this.cpassTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label6, 0);
-            this.panel6.Controls.SetChildIndex(this.textBox5, 0);
+            this.panel6.Controls.SetChildIndex(this.phone2Txt, 0);
             this.panel6.Controls.SetChildIndex(this.label7, 0);
-            this.panel6.Controls.SetChildIndex(this.comboBox1, 0);
+            this.panel6.Controls.SetChildIndex(this.statusCBTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label8, 0);
-            this.panel6.Controls.SetChildIndex(this.comboBox2, 0);
+            this.panel6.Controls.SetChildIndex(this.roleCBTxt, 0);
             this.panel6.Controls.SetChildIndex(this.BrowseBtn, 0);
-            this.panel6.Controls.SetChildIndex(this.textBox6, 0);
+            this.panel6.Controls.SetChildIndex(this.phoneTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label9, 0);
             this.panel6.Controls.SetChildIndex(this.textBox7, 0);
             this.panel6.Controls.SetChildIndex(this.label10, 0);
+            this.panel6.Controls.SetChildIndex(this.nameErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.usernameErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.passErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.cpassErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.phone1ErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.phone2ErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.roleErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.statusErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.panel6.Controls.SetChildIndex(this.mismatchedErrorLabel, 0);
             // 
             // panel5
             // 
-            this.panel5.Size = new System.Drawing.Size(1081, 593);
+            this.panel5.Size = new System.Drawing.Size(870, 707);
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(234, 50);
             this.panel2.TabIndex = 0;
@@ -130,19 +162,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             // 
-            // textBox1
+            // nameTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 25);
-            this.textBox1.TabIndex = 2;
+            this.nameTxt.Location = new System.Drawing.Point(4, 130);
+            this.nameTxt.Name = "nameTxt";
+            this.nameTxt.Size = new System.Drawing.Size(224, 25);
+            this.nameTxt.TabIndex = 2;
             // 
-            // textBox2
+            // usernameTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(4, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(224, 25);
-            this.textBox2.TabIndex = 4;
+            this.usernameTxt.Location = new System.Drawing.Point(4, 179);
+            this.usernameTxt.Name = "usernameTxt";
+            this.usernameTxt.Size = new System.Drawing.Size(224, 25);
+            this.usernameTxt.TabIndex = 4;
             // 
             // label3
             // 
@@ -153,12 +185,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Username";
             // 
-            // textBox3
+            // PasswordTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(3, 228);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(224, 25);
-            this.textBox3.TabIndex = 6;
+            this.PasswordTxt.Location = new System.Drawing.Point(3, 228);
+            this.PasswordTxt.Name = "PasswordTxt";
+            this.PasswordTxt.Size = new System.Drawing.Size(224, 25);
+            this.PasswordTxt.TabIndex = 6;
             // 
             // label4
             // 
@@ -169,12 +201,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Password";
             // 
-            // textBox4
+            // cpassTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(3, 277);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(224, 25);
-            this.textBox4.TabIndex = 8;
+            this.cpassTxt.Location = new System.Drawing.Point(3, 277);
+            this.cpassTxt.Name = "cpassTxt";
+            this.cpassTxt.Size = new System.Drawing.Size(224, 25);
+            this.cpassTxt.TabIndex = 8;
             // 
             // label5
             // 
@@ -185,12 +217,12 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Confirm Password";
             // 
-            // textBox5
+            // phone2Txt
             // 
-            this.textBox5.Location = new System.Drawing.Point(4, 373);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(224, 25);
-            this.textBox5.TabIndex = 10;
+            this.phone2Txt.Location = new System.Drawing.Point(4, 373);
+            this.phone2Txt.Name = "phone2Txt";
+            this.phone2Txt.Size = new System.Drawing.Size(224, 25);
+            this.phone2Txt.TabIndex = 10;
             // 
             // label6
             // 
@@ -210,21 +242,21 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Phone 2";
             // 
-            // comboBox1
+            // statusCBTxt
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 469);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(225, 25);
-            this.comboBox1.TabIndex = 13;
+            this.statusCBTxt.FormattingEnabled = true;
+            this.statusCBTxt.Location = new System.Drawing.Point(4, 469);
+            this.statusCBTxt.Name = "statusCBTxt";
+            this.statusCBTxt.Size = new System.Drawing.Size(225, 25);
+            this.statusCBTxt.TabIndex = 13;
             // 
-            // comboBox2
+            // roleCBTxt
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 421);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(225, 25);
-            this.comboBox2.TabIndex = 15;
+            this.roleCBTxt.FormattingEnabled = true;
+            this.roleCBTxt.Location = new System.Drawing.Point(3, 421);
+            this.roleCBTxt.Name = "roleCBTxt";
+            this.roleCBTxt.Size = new System.Drawing.Size(225, 25);
+            this.roleCBTxt.TabIndex = 15;
             // 
             // label8
             // 
@@ -246,12 +278,12 @@
             this.BrowseBtn.Text = "Browse";
             this.BrowseBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // phoneTxt
             // 
-            this.textBox6.Location = new System.Drawing.Point(3, 325);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(224, 25);
-            this.textBox6.TabIndex = 17;
+            this.phoneTxt.Location = new System.Drawing.Point(3, 325);
+            this.phoneTxt.Name = "phoneTxt";
+            this.phoneTxt.Size = new System.Drawing.Size(224, 25);
+            this.phoneTxt.TabIndex = 17;
             // 
             // label9
             // 
@@ -278,17 +310,120 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "Status";
             // 
+            // nameErrorLabel
+            // 
+            this.nameErrorLabel.AutoSize = true;
+            this.nameErrorLabel.Location = new System.Drawing.Point(214, 110);
+            this.nameErrorLabel.Name = "nameErrorLabel";
+            this.nameErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.nameErrorLabel.TabIndex = 21;
+            this.nameErrorLabel.Text = "*";
+            this.nameErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // usernameErrorLabel
+            // 
+            this.usernameErrorLabel.AutoSize = true;
+            this.usernameErrorLabel.Location = new System.Drawing.Point(214, 159);
+            this.usernameErrorLabel.Name = "usernameErrorLabel";
+            this.usernameErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.usernameErrorLabel.TabIndex = 22;
+            this.usernameErrorLabel.Text = "*";
+            this.usernameErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // passErrorLabel
+            // 
+            this.passErrorLabel.AutoSize = true;
+            this.passErrorLabel.Location = new System.Drawing.Point(214, 208);
+            this.passErrorLabel.Name = "passErrorLabel";
+            this.passErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.passErrorLabel.TabIndex = 23;
+            this.passErrorLabel.Text = "*";
+            this.passErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cpassErrorLabel
+            // 
+            this.cpassErrorLabel.AutoSize = true;
+            this.cpassErrorLabel.Location = new System.Drawing.Point(214, 256);
+            this.cpassErrorLabel.Name = "cpassErrorLabel";
+            this.cpassErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.cpassErrorLabel.TabIndex = 24;
+            this.cpassErrorLabel.Text = "*";
+            this.cpassErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // phone1ErrorLabel
+            // 
+            this.phone1ErrorLabel.AutoSize = true;
+            this.phone1ErrorLabel.Location = new System.Drawing.Point(214, 305);
+            this.phone1ErrorLabel.Name = "phone1ErrorLabel";
+            this.phone1ErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.phone1ErrorLabel.TabIndex = 25;
+            this.phone1ErrorLabel.Text = "*";
+            this.phone1ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // phone2ErrorLabel
+            // 
+            this.phone2ErrorLabel.AutoSize = true;
+            this.phone2ErrorLabel.Location = new System.Drawing.Point(214, 353);
+            this.phone2ErrorLabel.Name = "phone2ErrorLabel";
+            this.phone2ErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.phone2ErrorLabel.TabIndex = 26;
+            this.phone2ErrorLabel.Text = "*";
+            this.phone2ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // roleErrorLabel
+            // 
+            this.roleErrorLabel.AutoSize = true;
+            this.roleErrorLabel.Location = new System.Drawing.Point(214, 401);
+            this.roleErrorLabel.Name = "roleErrorLabel";
+            this.roleErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.roleErrorLabel.TabIndex = 27;
+            this.roleErrorLabel.Text = "*";
+            this.roleErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // statusErrorLabel
+            // 
+            this.statusErrorLabel.AutoSize = true;
+            this.statusErrorLabel.Location = new System.Drawing.Point(214, 449);
+            this.statusErrorLabel.Name = "statusErrorLabel";
+            this.statusErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.statusErrorLabel.TabIndex = 28;
+            this.statusErrorLabel.Text = "*";
+            this.statusErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(61, 596);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 99);
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // mismatchedErrorLabel
+            // 
+            this.mismatchedErrorLabel.AutoSize = true;
+            this.mismatchedErrorLabel.Location = new System.Drawing.Point(137, 257);
+            this.mismatchedErrorLabel.Name = "mismatchedErrorLabel";
+            this.mismatchedErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.mismatchedErrorLabel.TabIndex = 30;
+            this.mismatchedErrorLabel.Text = "*";
+            this.mismatchedErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1315, 633);
+            this.ClientSize = new System.Drawing.Size(1104, 747);
             this.Name = "Staff";
             this.Text = "Staff";
             this.leftPanel.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,23 +432,34 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox phone2Txt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox cpassTxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PasswordTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usernameTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nameTxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox roleCBTxt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox statusCBTxt;
         private System.Windows.Forms.Button BrowseBtn;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox phoneTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label nameErrorLabel;
+        private System.Windows.Forms.Label statusErrorLabel;
+        private System.Windows.Forms.Label roleErrorLabel;
+        private System.Windows.Forms.Label phone2ErrorLabel;
+        private System.Windows.Forms.Label phone1ErrorLabel;
+        private System.Windows.Forms.Label cpassErrorLabel;
+        private System.Windows.Forms.Label passErrorLabel;
+        private System.Windows.Forms.Label usernameErrorLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label mismatchedErrorLabel;
     }
 }

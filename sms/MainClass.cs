@@ -9,8 +9,8 @@ namespace sms
 {
     class MainClass
     {
-        public string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public  void showWindow(Form openWin, Form closeWin, Form MDI)
+        public static string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static void showWindow(Form openWin, Form closeWin, Form MDI)
         {
             closeWin.Close();
             openWin.WindowState = FormWindowState.Maximized;
@@ -198,5 +198,6 @@ namespace sms
                 }
             }
         }
+
     }
 }

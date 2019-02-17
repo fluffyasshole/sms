@@ -16,13 +16,11 @@ namespace sms
         {
             InitializeComponent();
         }
-
-        MainClass main = new MainClass();
         private void loginBtn_Click(object sender, EventArgs e)
         {
             HomeScreen hs = new HomeScreen();
 
-            main.showWindow(hs, this, MDI.ActiveForm);
+            MainClass.showWindow(hs, this, MDI.ActiveForm);
         }
     }
 }

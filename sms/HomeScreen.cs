@@ -16,18 +16,16 @@ namespace sms
         {
             InitializeComponent();
         }
-        MainClass main = new MainClass();
-
         private void staffBtn_Click(object sender, EventArgs e)
         {
             Staff st = new Staff();
-            main.showWindow(st, this, MDI.ActiveForm);
+            MainClass.showWindow(st, this, MDI.ActiveForm);
         }
 
         private void classesBtn_Click(object sender, EventArgs e)
         {
             Classes st = new Classes();
-            main.showWindow(st, this, MDI.ActiveForm);
+            MainClass.showWindow(st, this, MDI.ActiveForm);
         }
 
         private void sectionBtn_Click(object sender, EventArgs e)
@@ -88,7 +86,7 @@ namespace sms
         private void rolesBtn_Click(object sender, EventArgs e)
         {
             Roles st = new Roles();
-            main.showWindow(st, this, MDI.ActiveForm);
+            MainClass.showWindow(st, this, MDI.ActiveForm);
         }
     }
 }
