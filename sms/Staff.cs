@@ -22,10 +22,5 @@ namespace sms
             HomeScreen hs = new HomeScreen();
             
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
