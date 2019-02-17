@@ -34,7 +34,9 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +64,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -99,6 +102,17 @@
             this.panel4.Size = new System.Drawing.Size(1091, 40);
             this.panel4.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 40);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Sample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -111,6 +125,7 @@
             this.Name = "Sample";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.leftPanel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -124,6 +139,7 @@
         public System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
     }
 }
 

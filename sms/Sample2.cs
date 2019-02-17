@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace sms
 {
-    public partial class Login : Sample
+    public partial class Sample2 : Sample
     {
-        public Login()
+        public Sample2()
         {
             InitializeComponent();
-        }
-
-        MainClass main = new MainClass();
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-            HomeScreen hs = new HomeScreen();
-
-            main.showWindow(hs, this, MDI.ActiveForm);
         }
     }
 }

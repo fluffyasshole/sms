@@ -17,11 +17,10 @@ namespace sms
         {
             InitializeComponent();
         }
-
+        MainClass main = new MainClass();
         private void MDI_Load(object sender, EventArgs e)
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            if (File.Exists(path + "\\cnt"))
+            if (File.Exists(main.path + "\\cnt"))
             {
                 Login obj = new Login();
                 obj.MdiParent = this;
