@@ -16,5 +16,18 @@ namespace sms
         {
             InitializeComponent();
         }
+        MainClass main = new MainClass();
+
+        private void staffBtn_Click(object sender, EventArgs e)
+        {
+            Staff st = new Staff();
+            main.showWindow(st, this, MDI.ActiveForm);
+        }
+
+        private void classesBtn_Click(object sender, EventArgs e)
+        {
+            Classes cl = new Classes();
+            main.showWindow(cl, this, MDI.ActiveForm);
+        }
     }
 }

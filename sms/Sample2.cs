@@ -16,5 +16,42 @@ namespace sms
         {
             InitializeComponent();
         }
+        public virtual void addBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void editBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void saveBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void deleteBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void viewBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public virtual void searchTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        MainClass main = new MainClass();
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            HomeScreen hs = new HomeScreen();
+            main.showWindow(hs, this, MDI.ActiveForm);
+        }
     }
 }

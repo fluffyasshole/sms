@@ -42,11 +42,11 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.voucherBtn = new System.Windows.Forms.Button();
+            this.studentBtn = new System.Windows.Forms.Button();
+            this.sectionBtn = new System.Windows.Forms.Button();
+            this.classesBtn = new System.Windows.Forms.Button();
+            this.staffBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
@@ -98,11 +98,11 @@
             this.tableLayoutPanel1.Controls.Add(this.button8, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.button7, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.button6, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.voucherBtn, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.studentBtn, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.sectionBtn, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.classesBtn, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.staffBtn, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -173,7 +173,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(176, 87);
             this.button14.TabIndex = 13;
-            this.button14.Text = "button14";
+            this.button14.Text = "Roles";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // button13
@@ -185,7 +185,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(176, 87);
             this.button13.TabIndex = 12;
-            this.button13.Text = "button13";
+            this.button13.Text = "Subject";
             this.button13.UseVisualStyleBackColor = true;
             // 
             // button12
@@ -197,7 +197,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(179, 87);
             this.button12.TabIndex = 11;
-            this.button12.Text = "button12";
+            this.button12.Text = "Subject";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button11
@@ -209,7 +209,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(176, 87);
             this.button11.TabIndex = 10;
-            this.button11.Text = "button11";
+            this.button11.Text = "Results";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button10
@@ -221,7 +221,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(176, 87);
             this.button10.TabIndex = 9;
-            this.button10.Text = "button10";
+            this.button10.Text = "Attendance";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -272,65 +272,67 @@
             this.button6.Text = "Exams";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // voucherBtn
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(731, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(176, 87);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Fee Vouchers";
-            this.button5.UseVisualStyleBackColor = true;
+            this.voucherBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.voucherBtn.FlatAppearance.BorderSize = 2;
+            this.voucherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.voucherBtn.Location = new System.Drawing.Point(731, 3);
+            this.voucherBtn.Name = "voucherBtn";
+            this.voucherBtn.Size = new System.Drawing.Size(176, 87);
+            this.voucherBtn.TabIndex = 4;
+            this.voucherBtn.Text = "Fee Vouchers";
+            this.voucherBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // studentBtn
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(549, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(176, 87);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Students";
-            this.button4.UseVisualStyleBackColor = true;
+            this.studentBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentBtn.FlatAppearance.BorderSize = 2;
+            this.studentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.studentBtn.Location = new System.Drawing.Point(549, 3);
+            this.studentBtn.Name = "studentBtn";
+            this.studentBtn.Size = new System.Drawing.Size(176, 87);
+            this.studentBtn.TabIndex = 3;
+            this.studentBtn.Text = "Students";
+            this.studentBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // sectionBtn
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(367, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(176, 87);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sections";
-            this.button3.UseVisualStyleBackColor = true;
+            this.sectionBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sectionBtn.FlatAppearance.BorderSize = 2;
+            this.sectionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sectionBtn.Location = new System.Drawing.Point(367, 3);
+            this.sectionBtn.Name = "sectionBtn";
+            this.sectionBtn.Size = new System.Drawing.Size(176, 87);
+            this.sectionBtn.TabIndex = 2;
+            this.sectionBtn.Text = "Sections";
+            this.sectionBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // classesBtn
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(185, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 87);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Classes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.classesBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.classesBtn.FlatAppearance.BorderSize = 2;
+            this.classesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classesBtn.Location = new System.Drawing.Point(185, 3);
+            this.classesBtn.Name = "classesBtn";
+            this.classesBtn.Size = new System.Drawing.Size(176, 87);
+            this.classesBtn.TabIndex = 1;
+            this.classesBtn.Text = "Classes";
+            this.classesBtn.UseVisualStyleBackColor = true;
+            this.classesBtn.Click += new System.EventHandler(this.classesBtn_Click);
             // 
-            // button1
+            // staffBtn
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 87);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Staff";
-            this.button1.UseVisualStyleBackColor = true;
+            this.staffBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffBtn.FlatAppearance.BorderSize = 2;
+            this.staffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staffBtn.Location = new System.Drawing.Point(3, 3);
+            this.staffBtn.Name = "staffBtn";
+            this.staffBtn.Size = new System.Drawing.Size(176, 87);
+            this.staffBtn.TabIndex = 0;
+            this.staffBtn.Text = "Staff";
+            this.staffBtn.UseVisualStyleBackColor = true;
+            this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
             // panel1
             // 
@@ -373,10 +375,10 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button voucherBtn;
+        private System.Windows.Forms.Button studentBtn;
+        private System.Windows.Forms.Button sectionBtn;
+        private System.Windows.Forms.Button classesBtn;
+        private System.Windows.Forms.Button staffBtn;
     }
 }
