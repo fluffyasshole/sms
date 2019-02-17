@@ -63,6 +63,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.snoGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPassGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -483,6 +484,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.snoGV,
+            this.userIDGV,
             this.nameGV,
             this.usernameGV,
             this.cPassGV,
@@ -506,6 +508,13 @@
             this.snoGV.Name = "snoGV";
             this.snoGV.ReadOnly = true;
             this.snoGV.Width = 62;
+            // 
+            // userIDGV
+            // 
+            this.userIDGV.HeaderText = "User ID";
+            this.userIDGV.Name = "userIDGV";
+            this.userIDGV.ReadOnly = true;
+            this.userIDGV.Visible = false;
             // 
             // nameGV
             // 
@@ -612,6 +621,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPassGV;

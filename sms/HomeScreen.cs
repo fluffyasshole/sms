@@ -30,7 +30,8 @@ namespace sms
 
         private void sectionBtn_Click(object sender, EventArgs e)
         {
-
+            Sections st = new Sections();
+            MainClass.showWindow(st, this, MDI.ActiveForm);
         }
 
         private void studentBtn_Click(object sender, EventArgs e)

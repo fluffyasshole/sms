@@ -93,6 +93,12 @@
     <Compile Include="Sample2.Designer.cs">
       <DependentUpon>Sample2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sections.Designer.cs">
+      <DependentUpon>Sections.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </Compile>
     <EmbeddedResource Include="Sample2.resx">
       <DependentUpon>Sample2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sections.resx">
+      <DependentUpon>Sections.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
