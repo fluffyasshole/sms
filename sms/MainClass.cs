@@ -62,6 +62,11 @@ namespace sms
                     dtp.Enabled = false;
                     dtp.Value = DateTime.Now;
                 }
+                if (c is Button)
+                {
+                    Button b = (Button)c;
+                    b.Enabled = false;
+                }
             }
         }
         public static void disable(Panel p)
@@ -92,6 +97,11 @@ namespace sms
                 {
                     DateTimePicker dtp = (DateTimePicker)c;
                     dtp.Enabled = false;
+                }
+                if (c is Button)
+                {
+                    Button b = (Button)c;
+                    b.Enabled = false;
                 }
             }
         }
@@ -129,6 +139,11 @@ namespace sms
                     dtp.Enabled = true;
                     dtp.Value = DateTime.Now;
                 }
+                if (c is Button)
+                {
+                    Button b = (Button)c;
+                    b.Enabled = true;
+                }
             }
         }
         public static void enable_reset(GroupBox gb)
@@ -165,6 +180,11 @@ namespace sms
                     dtp.Enabled = true;
                     dtp.Value = DateTime.Now;
                 }
+                if (c is Button)
+                {
+                    Button b = (Button)c;
+                    b.Enabled = false;
+                }
             }
         }
         public static void enable(Panel p)
@@ -195,6 +215,11 @@ namespace sms
                 {
                     DateTimePicker dtp = (DateTimePicker)c;
                     dtp.Enabled = true;
+                }
+                if (c is Button)
+                {
+                    Button b = (Button)c;
+                    b.Enabled = true;
                 }
             }
         }

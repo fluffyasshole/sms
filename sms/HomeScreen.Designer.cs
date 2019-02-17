@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button18 = new System.Windows.Forms.Button();
+            this.classTimeButton = new System.Windows.Forms.Button();
             this.rolesBtn = new System.Windows.Forms.Button();
             this.subjectBtn = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -45,6 +45,7 @@
             this.classesBtn = new System.Windows.Forms.Button();
             this.staffBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.shiftsButton = new System.Windows.Forms.Button();
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -82,7 +83,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.button18, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.rolesBtn, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.subjectBtn, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.button12, 5, 1);
@@ -97,6 +97,8 @@
             this.tableLayoutPanel1.Controls.Add(this.sectionBtn, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.classesBtn, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.staffBtn, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.classTimeButton, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.shiftsButton, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -110,17 +112,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1095, 561);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button18
+            // classTimeButton
             // 
-            this.button18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button18.FlatAppearance.BorderSize = 2;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(913, 189);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(179, 87);
-            this.button18.TabIndex = 17;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
+            this.classTimeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.classTimeButton.FlatAppearance.BorderSize = 2;
+            this.classTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classTimeButton.Location = new System.Drawing.Point(367, 189);
+            this.classTimeButton.Name = "classTimeButton";
+            this.classTimeButton.Size = new System.Drawing.Size(176, 87);
+            this.classTimeButton.TabIndex = 17;
+            this.classTimeButton.Text = "Class Time ";
+            this.classTimeButton.UseVisualStyleBackColor = true;
             // 
             // rolesBtn
             // 
@@ -312,6 +314,18 @@
             this.panel1.Size = new System.Drawing.Size(1095, 25);
             this.panel1.TabIndex = 1;
             // 
+            // shiftsButton
+            // 
+            this.shiftsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shiftsButton.FlatAppearance.BorderSize = 2;
+            this.shiftsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shiftsButton.Location = new System.Drawing.Point(549, 189);
+            this.shiftsButton.Name = "shiftsButton";
+            this.shiftsButton.Size = new System.Drawing.Size(176, 87);
+            this.shiftsButton.TabIndex = 18;
+            this.shiftsButton.Text = "Shifts";
+            this.shiftsButton.UseVisualStyleBackColor = true;
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -332,7 +346,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button classTimeButton;
         private System.Windows.Forms.Button rolesBtn;
         private System.Windows.Forms.Button subjectBtn;
         private System.Windows.Forms.Button button12;
@@ -347,5 +361,6 @@
         private System.Windows.Forms.Button sectionBtn;
         private System.Windows.Forms.Button classesBtn;
         private System.Windows.Forms.Button staffBtn;
+        private System.Windows.Forms.Button shiftsButton;
     }
 }

@@ -46,7 +46,7 @@
             this.BrowseBtn = new System.Windows.Forms.Button();
             this.phoneTxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.imagePathTxt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.nameErrorLabel = new System.Windows.Forms.Label();
             this.usernameErrorLabel = new System.Windows.Forms.Label();
@@ -79,18 +79,9 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.mismatchedErrorLabel);
             this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Controls.Add(this.statusErrorLabel);
-            this.panel6.Controls.Add(this.roleErrorLabel);
-            this.panel6.Controls.Add(this.phone2ErrorLabel);
-            this.panel6.Controls.Add(this.phone1ErrorLabel);
-            this.panel6.Controls.Add(this.cpassErrorLabel);
-            this.panel6.Controls.Add(this.passErrorLabel);
-            this.panel6.Controls.Add(this.usernameErrorLabel);
-            this.panel6.Controls.Add(this.nameErrorLabel);
             this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.textBox7);
+            this.panel6.Controls.Add(this.imagePathTxt);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.phoneTxt);
             this.panel6.Controls.Add(this.BrowseBtn);
@@ -109,7 +100,25 @@
             this.panel6.Controls.Add(this.nameTxt);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.panel2);
+            this.panel6.Controls.Add(this.mismatchedErrorLabel);
+            this.panel6.Controls.Add(this.statusErrorLabel);
+            this.panel6.Controls.Add(this.roleErrorLabel);
+            this.panel6.Controls.Add(this.phone2ErrorLabel);
+            this.panel6.Controls.Add(this.phone1ErrorLabel);
+            this.panel6.Controls.Add(this.cpassErrorLabel);
+            this.panel6.Controls.Add(this.passErrorLabel);
+            this.panel6.Controls.Add(this.usernameErrorLabel);
+            this.panel6.Controls.Add(this.nameErrorLabel);
             this.panel6.Size = new System.Drawing.Size(234, 707);
+            this.panel6.Controls.SetChildIndex(this.nameErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.usernameErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.passErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.cpassErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.phone1ErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.phone2ErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.roleErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.statusErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.mismatchedErrorLabel, 0);
             this.panel6.Controls.SetChildIndex(this.panel2, 0);
             this.panel6.Controls.SetChildIndex(this.label2, 0);
             this.panel6.Controls.SetChildIndex(this.nameTxt, 0);
@@ -128,18 +137,9 @@
             this.panel6.Controls.SetChildIndex(this.BrowseBtn, 0);
             this.panel6.Controls.SetChildIndex(this.phoneTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label9, 0);
-            this.panel6.Controls.SetChildIndex(this.textBox7, 0);
+            this.panel6.Controls.SetChildIndex(this.imagePathTxt, 0);
             this.panel6.Controls.SetChildIndex(this.label10, 0);
-            this.panel6.Controls.SetChildIndex(this.nameErrorLabel, 0);
-            this.panel6.Controls.SetChildIndex(this.usernameErrorLabel, 0);
-            this.panel6.Controls.SetChildIndex(this.passErrorLabel, 0);
-            this.panel6.Controls.SetChildIndex(this.cpassErrorLabel, 0);
-            this.panel6.Controls.SetChildIndex(this.phone1ErrorLabel, 0);
-            this.panel6.Controls.SetChildIndex(this.phone2ErrorLabel, 0);
-            this.panel6.Controls.SetChildIndex(this.roleErrorLabel, 0);
-            this.panel6.Controls.SetChildIndex(this.statusErrorLabel, 0);
             this.panel6.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.panel6.Controls.SetChildIndex(this.mismatchedErrorLabel, 0);
             // 
             // panel5
             // 
@@ -165,16 +165,20 @@
             // nameTxt
             // 
             this.nameTxt.Location = new System.Drawing.Point(4, 130);
+            this.nameTxt.MaxLength = 50;
             this.nameTxt.Name = "nameTxt";
             this.nameTxt.Size = new System.Drawing.Size(224, 25);
             this.nameTxt.TabIndex = 2;
+            this.nameTxt.TextChanged += new System.EventHandler(this.nameTxt_TextChanged);
             // 
             // usernameTxt
             // 
             this.usernameTxt.Location = new System.Drawing.Point(4, 179);
+            this.usernameTxt.MaxLength = 50;
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(224, 25);
             this.usernameTxt.TabIndex = 4;
+            this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);
             // 
             // label3
             // 
@@ -188,9 +192,11 @@
             // PasswordTxt
             // 
             this.PasswordTxt.Location = new System.Drawing.Point(3, 228);
+            this.PasswordTxt.MaxLength = 50;
             this.PasswordTxt.Name = "PasswordTxt";
             this.PasswordTxt.Size = new System.Drawing.Size(224, 25);
             this.PasswordTxt.TabIndex = 6;
+            this.PasswordTxt.TextChanged += new System.EventHandler(this.PasswordTxt_TextChanged);
             // 
             // label4
             // 
@@ -204,9 +210,12 @@
             // cpassTxt
             // 
             this.cpassTxt.Location = new System.Drawing.Point(3, 277);
+            this.cpassTxt.MaxLength = 50;
             this.cpassTxt.Name = "cpassTxt";
             this.cpassTxt.Size = new System.Drawing.Size(224, 25);
             this.cpassTxt.TabIndex = 8;
+            this.cpassTxt.TextChanged += new System.EventHandler(this.cpassTxt_TextChanged);
+            this.cpassTxt.Validating += new System.ComponentModel.CancelEventHandler(this.cpassTxt_Validating);
             // 
             // label5
             // 
@@ -220,6 +229,7 @@
             // phone2Txt
             // 
             this.phone2Txt.Location = new System.Drawing.Point(4, 373);
+            this.phone2Txt.MaxLength = 50;
             this.phone2Txt.Name = "phone2Txt";
             this.phone2Txt.Size = new System.Drawing.Size(224, 25);
             this.phone2Txt.TabIndex = 10;
@@ -249,6 +259,7 @@
             this.statusCBTxt.Name = "statusCBTxt";
             this.statusCBTxt.Size = new System.Drawing.Size(225, 25);
             this.statusCBTxt.TabIndex = 13;
+            this.statusCBTxt.SelectedIndexChanged += new System.EventHandler(this.statusCBTxt_SelectedIndexChanged);
             // 
             // roleCBTxt
             // 
@@ -257,6 +268,7 @@
             this.roleCBTxt.Name = "roleCBTxt";
             this.roleCBTxt.Size = new System.Drawing.Size(225, 25);
             this.roleCBTxt.TabIndex = 15;
+            this.roleCBTxt.SelectedIndexChanged += new System.EventHandler(this.roleCBTxt_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -277,13 +289,16 @@
             this.BrowseBtn.TabIndex = 16;
             this.BrowseBtn.Text = "Browse";
             this.BrowseBtn.UseVisualStyleBackColor = true;
+            this.BrowseBtn.Click += new System.EventHandler(this.BrowseBtn_Click);
             // 
             // phoneTxt
             // 
             this.phoneTxt.Location = new System.Drawing.Point(3, 325);
+            this.phoneTxt.MaxLength = 50;
             this.phoneTxt.Name = "phoneTxt";
             this.phoneTxt.Size = new System.Drawing.Size(224, 25);
             this.phoneTxt.TabIndex = 17;
+            this.phoneTxt.TextChanged += new System.EventHandler(this.phoneTxt_TextChanged);
             // 
             // label9
             // 
@@ -294,12 +309,13 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Image";
             // 
-            // textBox7
+            // imagePathTxt
             // 
-            this.textBox7.Location = new System.Drawing.Point(4, 518);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(223, 25);
-            this.textBox7.TabIndex = 19;
+            this.imagePathTxt.Location = new System.Drawing.Point(4, 518);
+            this.imagePathTxt.MaxLength = 50;
+            this.imagePathTxt.Name = "imagePathTxt";
+            this.imagePathTxt.Size = new System.Drawing.Size(223, 25);
+            this.imagePathTxt.TabIndex = 19;
             // 
             // label10
             // 
@@ -319,6 +335,7 @@
             this.nameErrorLabel.TabIndex = 21;
             this.nameErrorLabel.Text = "*";
             this.nameErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nameErrorLabel.Visible = false;
             // 
             // usernameErrorLabel
             // 
@@ -329,6 +346,7 @@
             this.usernameErrorLabel.TabIndex = 22;
             this.usernameErrorLabel.Text = "*";
             this.usernameErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.usernameErrorLabel.Visible = false;
             // 
             // passErrorLabel
             // 
@@ -339,6 +357,7 @@
             this.passErrorLabel.TabIndex = 23;
             this.passErrorLabel.Text = "*";
             this.passErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.passErrorLabel.Visible = false;
             // 
             // cpassErrorLabel
             // 
@@ -349,6 +368,7 @@
             this.cpassErrorLabel.TabIndex = 24;
             this.cpassErrorLabel.Text = "*";
             this.cpassErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cpassErrorLabel.Visible = false;
             // 
             // phone1ErrorLabel
             // 
@@ -359,6 +379,7 @@
             this.phone1ErrorLabel.TabIndex = 25;
             this.phone1ErrorLabel.Text = "*";
             this.phone1ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.phone1ErrorLabel.Visible = false;
             // 
             // phone2ErrorLabel
             // 
@@ -369,6 +390,7 @@
             this.phone2ErrorLabel.TabIndex = 26;
             this.phone2ErrorLabel.Text = "*";
             this.phone2ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.phone2ErrorLabel.Visible = false;
             // 
             // roleErrorLabel
             // 
@@ -379,6 +401,7 @@
             this.roleErrorLabel.TabIndex = 27;
             this.roleErrorLabel.Text = "*";
             this.roleErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.roleErrorLabel.Visible = false;
             // 
             // statusErrorLabel
             // 
@@ -389,6 +412,7 @@
             this.statusErrorLabel.TabIndex = 28;
             this.statusErrorLabel.Text = "*";
             this.statusErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.statusErrorLabel.Visible = false;
             // 
             // pictureBox1
             // 
@@ -411,6 +435,7 @@
             this.mismatchedErrorLabel.TabIndex = 30;
             this.mismatchedErrorLabel.Text = "*";
             this.mismatchedErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mismatchedErrorLabel.Visible = false;
             // 
             // Staff
             // 
@@ -419,6 +444,7 @@
             this.ClientSize = new System.Drawing.Size(1104, 747);
             this.Name = "Staff";
             this.Text = "Staff";
+            this.Load += new System.EventHandler(this.Staff_Load);
             this.leftPanel.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -449,7 +475,7 @@
         private System.Windows.Forms.TextBox phoneTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox imagePathTxt;
         private System.Windows.Forms.Label nameErrorLabel;
         private System.Windows.Forms.Label statusErrorLabel;
         private System.Windows.Forms.Label roleErrorLabel;
