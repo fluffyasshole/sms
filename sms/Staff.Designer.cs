@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.nameTxt = new System.Windows.Forms.TextBox();
@@ -59,10 +60,24 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.mismatchedErrorLabel = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.snoGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPassGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone1GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone2GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageGB = new System.Windows.Forms.DataGridViewImageColumn();
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -143,7 +158,9 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.groupBox2);
             this.panel5.Size = new System.Drawing.Size(870, 707);
+            this.panel5.Controls.SetChildIndex(this.groupBox2, 0);
             // 
             // panel2
             // 
@@ -437,6 +454,108 @@
             this.mismatchedErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mismatchedErrorLabel.Visible = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 50);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(870, 657);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Details";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.snoGV,
+            this.nameGV,
+            this.usernameGV,
+            this.cPassGV,
+            this.phone1GV,
+            this.phone2GV,
+            this.roleGV,
+            this.statusGV,
+            this.imageGB});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 21);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(864, 633);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // snoGV
+            // 
+            this.snoGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.snoGV.HeaderText = "S. No";
+            this.snoGV.Name = "snoGV";
+            this.snoGV.ReadOnly = true;
+            this.snoGV.Width = 62;
+            // 
+            // nameGV
+            // 
+            this.nameGV.HeaderText = "Name";
+            this.nameGV.Name = "nameGV";
+            this.nameGV.ReadOnly = true;
+            // 
+            // usernameGV
+            // 
+            this.usernameGV.HeaderText = "Username";
+            this.usernameGV.Name = "usernameGV";
+            this.usernameGV.ReadOnly = true;
+            // 
+            // cPassGV
+            // 
+            this.cPassGV.HeaderText = "Confirm Password";
+            this.cPassGV.Name = "cPassGV";
+            this.cPassGV.ReadOnly = true;
+            this.cPassGV.Visible = false;
+            // 
+            // phone1GV
+            // 
+            this.phone1GV.HeaderText = "Phone";
+            this.phone1GV.Name = "phone1GV";
+            this.phone1GV.ReadOnly = true;
+            // 
+            // phone2GV
+            // 
+            this.phone2GV.HeaderText = "Phone 2";
+            this.phone2GV.Name = "phone2GV";
+            this.phone2GV.ReadOnly = true;
+            // 
+            // roleGV
+            // 
+            this.roleGV.HeaderText = "Role";
+            this.roleGV.Name = "roleGV";
+            this.roleGV.ReadOnly = true;
+            // 
+            // statusGV
+            // 
+            this.statusGV.HeaderText = "Status";
+            this.statusGV.Name = "statusGV";
+            this.statusGV.ReadOnly = true;
+            // 
+            // imageGB
+            // 
+            this.imageGB.HeaderText = "Image";
+            this.imageGB.Name = "imageGB";
+            this.imageGB.ReadOnly = true;
+            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -449,7 +568,10 @@
             this.rightPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,5 +609,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label mismatchedErrorLabel;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn snoGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cPassGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone1GV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone2GV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusGV;
+        private System.Windows.Forms.DataGridViewImageColumn imageGB;
     }
 }

@@ -34,6 +34,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.nameErrorLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -53,6 +55,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.nameErrorLabel);
             this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.listBox1);
             this.panel6.Controls.Add(this.comboBox1);
@@ -66,6 +70,8 @@
             this.panel6.Controls.SetChildIndex(this.comboBox1, 0);
             this.panel6.Controls.SetChildIndex(this.listBox1, 0);
             this.panel6.Controls.SetChildIndex(this.button1, 0);
+            this.panel6.Controls.SetChildIndex(this.nameErrorLabel, 0);
+            this.panel6.Controls.SetChildIndex(this.label4, 0);
             // 
             // panel5
             // 
@@ -124,6 +130,28 @@
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // nameErrorLabel
+            // 
+            this.nameErrorLabel.AutoSize = true;
+            this.nameErrorLabel.Location = new System.Drawing.Point(218, 110);
+            this.nameErrorLabel.Name = "nameErrorLabel";
+            this.nameErrorLabel.Size = new System.Drawing.Size(13, 17);
+            this.nameErrorLabel.TabIndex = 22;
+            this.nameErrorLabel.Text = "*";
+            this.nameErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nameErrorLabel.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(215, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 17);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "*";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Visible = false;
+            // 
             // Classes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -147,5 +175,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label nameErrorLabel;
     }
 }
