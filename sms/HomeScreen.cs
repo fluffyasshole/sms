@@ -88,7 +88,8 @@ namespace sms
 
         private void classTimeButton_Click(object sender, EventArgs e)
         {
-
+            ClassTimings st = new ClassTimings();
+            MainClass.showWindow(st, this, MDI.ActiveForm);
         }
     }
 }

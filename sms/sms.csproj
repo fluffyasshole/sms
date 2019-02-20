@@ -133,6 +133,9 @@
     <EmbeddedResource Include="Classes.resx">
       <DependentUpon>Classes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClassTimings.resx">
+      <DependentUpon>ClassTimings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
