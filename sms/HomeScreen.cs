@@ -74,20 +74,21 @@ namespace sms
 
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void subjectBtn_Click(object sender, EventArgs e)
         {
-
+            Subjects st = new Subjects();
+            MainClass.showWindow(st, this, MDI.ActiveForm);
         }
 
         private void rolesBtn_Click(object sender, EventArgs e)
         {
             Roles st = new Roles();
             MainClass.showWindow(st, this, MDI.ActiveForm);
+        }
+
+        private void classTimeButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

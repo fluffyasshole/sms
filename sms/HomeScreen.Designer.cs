@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.classTimeButton = new System.Windows.Forms.Button();
             this.rolesBtn = new System.Windows.Forms.Button();
             this.subjectBtn = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.resultsBtn = new System.Windows.Forms.Button();
             this.attendanceBtn = new System.Windows.Forms.Button();
             this.notificationBtn = new System.Windows.Forms.Button();
@@ -44,8 +42,9 @@
             this.sectionBtn = new System.Windows.Forms.Button();
             this.classesBtn = new System.Windows.Forms.Button();
             this.staffBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.classTimeButton = new System.Windows.Forms.Button();
             this.shiftsButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -85,7 +84,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.Controls.Add(this.rolesBtn, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.subjectBtn, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button12, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.resultsBtn, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.attendanceBtn, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.notificationBtn, 2, 1);
@@ -112,18 +110,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1095, 561);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // classTimeButton
-            // 
-            this.classTimeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.classTimeButton.FlatAppearance.BorderSize = 2;
-            this.classTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.classTimeButton.Location = new System.Drawing.Point(367, 189);
-            this.classTimeButton.Name = "classTimeButton";
-            this.classTimeButton.Size = new System.Drawing.Size(176, 87);
-            this.classTimeButton.TabIndex = 17;
-            this.classTimeButton.Text = "Class Time ";
-            this.classTimeButton.UseVisualStyleBackColor = true;
-            // 
             // rolesBtn
             // 
             this.rolesBtn.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -149,19 +135,6 @@
             this.subjectBtn.Text = "Subject";
             this.subjectBtn.UseVisualStyleBackColor = true;
             this.subjectBtn.Click += new System.EventHandler(this.subjectBtn_Click);
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button12.FlatAppearance.BorderSize = 2;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(913, 96);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(179, 87);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "Subject";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // resultsBtn
             // 
@@ -306,13 +279,18 @@
             this.staffBtn.UseVisualStyleBackColor = true;
             this.staffBtn.Click += new System.EventHandler(this.staffBtn_Click);
             // 
-            // panel1
+            // classTimeButton
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1095, 25);
-            this.panel1.TabIndex = 1;
+            this.classTimeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.classTimeButton.FlatAppearance.BorderSize = 2;
+            this.classTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classTimeButton.Location = new System.Drawing.Point(367, 189);
+            this.classTimeButton.Name = "classTimeButton";
+            this.classTimeButton.Size = new System.Drawing.Size(176, 87);
+            this.classTimeButton.TabIndex = 17;
+            this.classTimeButton.Text = "Class Time ";
+            this.classTimeButton.UseVisualStyleBackColor = true;
+            this.classTimeButton.Click += new System.EventHandler(this.classTimeButton_Click);
             // 
             // shiftsButton
             // 
@@ -325,6 +303,14 @@
             this.shiftsButton.TabIndex = 18;
             this.shiftsButton.Text = "Shifts";
             this.shiftsButton.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1095, 25);
+            this.panel1.TabIndex = 1;
             // 
             // HomeScreen
             // 
@@ -349,7 +335,6 @@
         private System.Windows.Forms.Button classTimeButton;
         private System.Windows.Forms.Button rolesBtn;
         private System.Windows.Forms.Button subjectBtn;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button resultsBtn;
         private System.Windows.Forms.Button attendanceBtn;
         private System.Windows.Forms.Button notificationBtn;
