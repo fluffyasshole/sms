@@ -115,7 +115,7 @@
             this.roleDropDown.FormattingEnabled = true;
             this.roleDropDown.Items.AddRange(new object[] {
             "Active",
-            "In-active"});
+            "Draft"});
             this.roleDropDown.Location = new System.Drawing.Point(9, 127);
             this.roleDropDown.Name = "roleDropDown";
             this.roleDropDown.Size = new System.Drawing.Size(219, 25);
@@ -219,6 +219,7 @@
             this.ClientSize = new System.Drawing.Size(1331, 629);
             this.Name = "Roles";
             this.Text = "Roles";
+            this.Load += new System.EventHandler(this.Roles_Load);
             this.leftPanel.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

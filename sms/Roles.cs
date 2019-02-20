@@ -16,7 +16,7 @@ namespace sms
         {
             InitializeComponent();
         }
-
+        int edit = 0;
         private void roleTxt_TextChanged(object sender, EventArgs e)
         {
             if (roleTxt.Text == "") { roleErrorLabel.Visible = true;  } else { roleErrorLabel.Visible = false; }
@@ -28,16 +28,34 @@ namespace sms
         }
         public override void addBtn_Click(object sender, EventArgs e)
         {
-
+            edit = 0;
+            MainClass.enable_reset(panel6);
         }
 
         public override void editBtn_Click(object sender, EventArgs e)
         {
-
+            edit = 1;
         }
 
         public override void saveBtn_Click(object sender, EventArgs e)
         {
+            if (roleTxt.Text == "") { roleErrorLabel.Visible = true; } else { roleErrorLabel.Visible = false; }
+            if (roleDropDown.SelectedIndex == -1) { statusErrorLabel.Visible = true; } else { statusErrorLabel.Visible = false; }
+            if (roleErrorLabel.Visible || statusErrorLabel.Visible)
+            {
+                MainClass.showMSG("Fields with * are madatory", "Stop", "Error");
+            }
+            else
+            {
+                if (edit == 0) //Code for SAVE OPERATION
+                {
+
+                }
+                else if (edit == 1)  //Code for UPDATE operation
+                {
+
+                }
+            }
 
         }
 
@@ -54,6 +72,11 @@ namespace sms
         public override void searchTxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Roles_Load(object sender, EventArgs e)
+        {
+            MainClass.disable_reset(panel6);
         }
     }
 
