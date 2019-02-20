@@ -91,5 +91,11 @@ namespace sms
             ClassTimings st = new ClassTimings();
             MainClass.showWindow(st, this, MDI.ActiveForm);
         }
+
+        private void shiftsButton_Click(object sender, EventArgs e)
+        {
+            Shifts st = new Shifts();
+            MainClass.showWindow(st, this, MDI.ActiveForm);
+        }
     }
 }

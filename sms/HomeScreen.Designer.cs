@@ -303,6 +303,7 @@
             this.shiftsButton.TabIndex = 18;
             this.shiftsButton.Text = "Shifts";
             this.shiftsButton.UseVisualStyleBackColor = true;
+            this.shiftsButton.Click += new System.EventHandler(this.shiftsButton_Click);
             // 
             // panel1
             // 
