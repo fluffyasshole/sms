@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +78,11 @@
     </Compile>
     <Compile Include="MDI.Designer.cs">
       <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDB.dbml</DependentUpon>
     </Compile>
     <Compile Include="Retieval.cs" />
     <Compile Include="Roles.cs">
@@ -185,6 +191,14 @@
     <EmbeddedResource Include="Subjects.resx">
       <DependentUpon>Subjects.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="myDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>myDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myDB.dbml.layout">
+      <DependentUpon>myDB.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -200,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-back-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

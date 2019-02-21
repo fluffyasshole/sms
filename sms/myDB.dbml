@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sms" Class="myDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=sms;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="sms.Properties.Settings" SettingsPropertyName="smsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.roles" Member="roles">
+    <Type Name="role">
+      <Column Name="r_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="r_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="r_status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

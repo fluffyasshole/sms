@@ -49,7 +49,19 @@ namespace sms
             {
                 if (edit == 0) //Code for SAVE OPERATION
                 {
-
+                    myDBDataContext obj = new myDBDataContext();
+                    role r = new role();
+                    r.r_name = roleTxt.Text;
+                    if (roleDropDown.SelectedIndex == 0)
+                    {
+                        r.r_status = 1;
+                    }
+                    else
+                    {
+                        r.r_status = 0;
+                    }
+                    obj.roles.InsertOnSubmit(r);
+                    obj.SubmitChanges();
                 }
                 else if (edit == 1)  //Code for UPDATE operation
                 {
