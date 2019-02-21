@@ -99,6 +99,14 @@ namespace sms
             statusGV.DataPropertyName = "Status";
             dataGridView1.DataSource = abc;
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1 && e.ColumnIndex != -1)
+            {
+                
+            }
+        }
     }
 
 }
