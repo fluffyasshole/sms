@@ -16,6 +16,7 @@ namespace sms
         {
             InitializeComponent();
         }
+        myDBDataContext obj = new myDBDataContext();
         int edit = 0;
         private void roleTxt_TextChanged(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace sms
             {
                 if (edit == 0) //Code for SAVE OPERATION
                 {
-                    myDBDataContext obj = new myDBDataContext();
+                    
                     role r = new role();
                     r.r_name = roleTxt.Text;
                     if (roleDropDown.SelectedIndex == 0)
@@ -60,8 +61,11 @@ namespace sms
                     {
                         r.r_status = 0;
                     }
-                    obj.roles.InsertOnSubmit(r);
+                    //obj.roles.InsertOnSubmit(r);
+                    obj.st_insertRoles(roleTxt.Text, r.r_status);
                     obj.SubmitChanges();
+                    MainClass.showMSG(roleTxt.Text + " added successfully,", "Success", "Success");
+                    MainClass.disable_reset(panel6);
                 }
                 else if (edit == 1)  //Code for UPDATE operation
                 {
@@ -89,6 +93,11 @@ namespace sms
         private void Roles_Load(object sender, EventArgs e)
         {
             MainClass.disable_reset(panel6);
+            var abc = obj.st_getRoles();
+            snoGV.DataPropertyName = "ID";
+            roleGV.DataPropertyName = "Role";
+            statusGV.DataPropertyName = "Status";
+            dataGridView1.DataSource = abc;
         }
     }
 
