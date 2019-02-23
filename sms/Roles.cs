@@ -70,7 +70,17 @@ namespace sms
                 }
                 else if (edit == 1)  //Code for UPDATE operation
                 {
-                    var data = obj.roles.Single(x => x.r_id == roleID);
+                    byte stat;
+                    if (roleDropDown.SelectedIndex == 0)
+                    {
+                        stat = 1;
+                    }
+                    else
+                    {
+                        stat  = 0;
+                    }
+                    obj.st_updateRoles(roleTxt.Text, stat, roleID);
+                   /* var data = obj.roles.Single(x => x.r_id == roleID);
                     data.r_name = roleTxt.Text;
                     if (roleDropDown.SelectedIndex == 0)
                     {
@@ -80,7 +90,7 @@ namespace sms
                     {
                         data.r_status = 0;
                     }
-                    obj.SubmitChanges();
+                    obj.SubmitChanges(); */
                     MainClass.showMSG(roleTxt.Text + " updated successfully,", "Success", "Success");
                     MainClass.disable_reset(panel6);
                     loadData();
@@ -91,12 +101,22 @@ namespace sms
 
         public override void deleteBtn_Click(object sender, EventArgs e)
         {
-
+            if (edit == 1)
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete " + roleTxt.Text + "?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    obj.st_deleteRoles(roleID);
+                    MainClass.showMSG(roleTxt.Text + " deleted successfully,", "Success", "Success");
+                    MainClass.disable_reset(panel6);
+                    loadData();
+                }
+            }
         }
 
         public override void viewBtn_Click(object sender, EventArgs e)
         {
-
+            loadData();
         }
 
         public override void searchTxt_TextChanged(object sender, EventArgs e)
@@ -111,16 +131,27 @@ namespace sms
             statusGV.DataPropertyName = "Status";
             dataGridView1.DataSource = abc;
         }
+
+        private void searchData()
+        {
+            //Code for serial number is yet remaining
+            var abc = obj.st_searcHRoles(searchTxt.Text);
+            rolesIDGV.DataPropertyName = "ID";
+            roleGV.DataPropertyName = "Role";
+            statusGV.DataPropertyName = "Status";
+            dataGridView1.DataSource = abc;
+        }
         private void Roles_Load(object sender, EventArgs e)
         {
             MainClass.disable_reset(panel6);
-            loadData();
+            
         }
         int roleID;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1 && e.ColumnIndex != -1)
             {
+                edit = 1;
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 roleID = Convert.ToInt32(row.Cells["rolesIDGV"].Value.ToString()); 
                 roleTxt.Text = row.Cells["roleGV"].Value.ToString();
