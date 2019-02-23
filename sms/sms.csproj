@@ -199,6 +199,20 @@
     <None Include="myDB.dbml.layout">
       <DependentUpon>myDB.dbml</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\Classes.datasource" />
+    <None Include="Properties\DataSources\ClassTimings.datasource" />
+    <None Include="Properties\DataSources\Deletion.datasource" />
+    <None Include="Properties\DataSources\HomeScreen.datasource" />
+    <None Include="Properties\DataSources\Insertion.datasource" />
+    <None Include="Properties\DataSources\Login.datasource" />
+    <None Include="Properties\DataSources\MainClass.datasource" />
+    <None Include="Properties\DataSources\MDI.datasource" />
+    <None Include="Properties\DataSources\myDBDataContext.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Retieval.datasource" />
+    <None Include="Properties\DataSources\role.datasource" />
+    <None Include="Properties\DataSources\Roles.datasource" />
+    <None Include="Properties\DataSources\st_getRolesResult.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

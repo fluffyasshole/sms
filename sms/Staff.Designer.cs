@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.nameTxt = new System.Windows.Forms.TextBox();
@@ -41,7 +42,7 @@
             this.phone2Txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.statusCBTxt = new System.Windows.Forms.ComboBox();
+            this.statusDD = new System.Windows.Forms.ComboBox();
             this.roleCBTxt = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.BrowseBtn = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@
             this.phone2GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageGB = new System.Windows.Forms.DataGridViewImageColumn();
+            this.stgetRolesResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.leftPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -79,19 +80,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stgetRolesResultBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // searchTxt
+            // 
+            this.searchTxt.Size = new System.Drawing.Size(171, 25);
             // 
             // leftPanel
             // 
-            this.leftPanel.Size = new System.Drawing.Size(234, 747);
+            this.leftPanel.Size = new System.Drawing.Size(234, 634);
             // 
             // rightPanel
             // 
-            this.rightPanel.Size = new System.Drawing.Size(870, 747);
+            this.rightPanel.Size = new System.Drawing.Size(1093, 634);
             // 
             // panel4
             // 
-            this.panel4.Size = new System.Drawing.Size(870, 40);
+            this.panel4.Size = new System.Drawing.Size(1093, 40);
             // 
             // panel6
             // 
@@ -103,7 +109,7 @@
             this.panel6.Controls.Add(this.BrowseBtn);
             this.panel6.Controls.Add(this.roleCBTxt);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.statusCBTxt);
+            this.panel6.Controls.Add(this.statusDD);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.phone2Txt);
             this.panel6.Controls.Add(this.label6);
@@ -125,7 +131,7 @@
             this.panel6.Controls.Add(this.passErrorLabel);
             this.panel6.Controls.Add(this.usernameErrorLabel);
             this.panel6.Controls.Add(this.nameErrorLabel);
-            this.panel6.Size = new System.Drawing.Size(234, 707);
+            this.panel6.Size = new System.Drawing.Size(234, 594);
             this.panel6.Controls.SetChildIndex(this.nameErrorLabel, 0);
             this.panel6.Controls.SetChildIndex(this.usernameErrorLabel, 0);
             this.panel6.Controls.SetChildIndex(this.passErrorLabel, 0);
@@ -147,7 +153,7 @@
             this.panel6.Controls.SetChildIndex(this.label6, 0);
             this.panel6.Controls.SetChildIndex(this.phone2Txt, 0);
             this.panel6.Controls.SetChildIndex(this.label7, 0);
-            this.panel6.Controls.SetChildIndex(this.statusCBTxt, 0);
+            this.panel6.Controls.SetChildIndex(this.statusDD, 0);
             this.panel6.Controls.SetChildIndex(this.label8, 0);
             this.panel6.Controls.SetChildIndex(this.roleCBTxt, 0);
             this.panel6.Controls.SetChildIndex(this.BrowseBtn, 0);
@@ -160,7 +166,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.groupBox2);
-            this.panel5.Size = new System.Drawing.Size(870, 707);
+            this.panel5.Size = new System.Drawing.Size(1093, 594);
             this.panel5.Controls.SetChildIndex(this.groupBox2, 0);
             // 
             // panel2
@@ -270,17 +276,18 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Phone 2";
             // 
-            // statusCBTxt
+            // statusDD
             // 
-            this.statusCBTxt.FormattingEnabled = true;
-            this.statusCBTxt.Location = new System.Drawing.Point(4, 469);
-            this.statusCBTxt.Name = "statusCBTxt";
-            this.statusCBTxt.Size = new System.Drawing.Size(225, 25);
-            this.statusCBTxt.TabIndex = 13;
-            this.statusCBTxt.SelectedIndexChanged += new System.EventHandler(this.statusCBTxt_SelectedIndexChanged);
+            this.statusDD.FormattingEnabled = true;
+            this.statusDD.Location = new System.Drawing.Point(4, 469);
+            this.statusDD.Name = "statusDD";
+            this.statusDD.Size = new System.Drawing.Size(225, 25);
+            this.statusDD.TabIndex = 13;
+            this.statusDD.SelectedIndexChanged += new System.EventHandler(this.statusCBTxt_SelectedIndexChanged);
             // 
             // roleCBTxt
             // 
+            this.roleCBTxt.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.stgetRolesResultBindingSource, "Status", true));
             this.roleCBTxt.FormattingEnabled = true;
             this.roleCBTxt.Location = new System.Drawing.Point(3, 421);
             this.roleCBTxt.Name = "roleCBTxt";
@@ -461,7 +468,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 50);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(870, 657);
+            this.groupBox2.Size = new System.Drawing.Size(1093, 544);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Details";
@@ -473,14 +480,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.snoGV,
@@ -491,14 +498,13 @@
             this.phone1GV,
             this.phone2GV,
             this.roleGV,
-            this.statusGV,
-            this.imageGB});
+            this.statusGV});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(864, 633);
+            this.dataGridView1.Size = new System.Drawing.Size(1087, 520);
             this.dataGridView1.TabIndex = 0;
             // 
             // snoGV
@@ -559,17 +565,15 @@
             this.statusGV.Name = "statusGV";
             this.statusGV.ReadOnly = true;
             // 
-            // imageGB
+            // stgetRolesResultBindingSource
             // 
-            this.imageGB.HeaderText = "Image";
-            this.imageGB.Name = "imageGB";
-            this.imageGB.ReadOnly = true;
+            this.stgetRolesResultBindingSource.DataSource = typeof(sms.st_getRolesResult);
             // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 747);
+            this.ClientSize = new System.Drawing.Size(1327, 634);
             this.Name = "Staff";
             this.Text = "Staff";
             this.Load += new System.EventHandler(this.Staff_Load);
@@ -581,6 +585,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stgetRolesResultBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,7 +606,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox roleCBTxt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox statusCBTxt;
+        private System.Windows.Forms.ComboBox statusDD;
         private System.Windows.Forms.Button BrowseBtn;
         private System.Windows.Forms.TextBox phoneTxt;
         private System.Windows.Forms.Label label9;
@@ -629,6 +634,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone2GV;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusGV;
-        private System.Windows.Forms.DataGridViewImageColumn imageGB;
+        private System.Windows.Forms.BindingSource stgetRolesResultBindingSource;
     }
 }

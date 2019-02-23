@@ -121,7 +121,7 @@ namespace sms
 
         public override void searchTxt_TextChanged(object sender, EventArgs e)
         {
-
+            searchData();
         }
         private void loadData()
         {

@@ -33,6 +33,9 @@ namespace sms
     partial void Insertrole(role instance);
     partial void Updaterole(role instance);
     partial void Deleterole(role instance);
+    partial void Insertstaff(staff instance);
+    partial void Updatestaff(staff instance);
+    partial void Deletestaff(staff instance);
     #endregion
 		
 		public myDBDataContext() : 
@@ -73,6 +76,14 @@ namespace sms
 			}
 		}
 		
+		public System.Data.Linq.Table<staff> staffs
+		{
+			get
+			{
+				return this.GetTable<staff>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertRoles")]
 		public int st_insertRoles([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status)
 		{
@@ -106,6 +117,20 @@ namespace sms
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), data);
 			return ((ISingleResult<st_searcHRolesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertStaff")]
+		public int st_insertStaff([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string phone1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string phone2, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> role, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Image")] System.Data.Linq.Binary image)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, username, password, phone1, phone2, role, status, image);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.st_insertStaffWithOutImage")]
+		public int st_insertStaffWithOutImage([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string phone1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string phone2, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> role, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> status)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), name, username, password, phone1, phone2, role, status);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -194,6 +219,260 @@ namespace sms
 					this._r_status = value;
 					this.SendPropertyChanged("r_status");
 					this.Onr_statusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.staff")]
+	public partial class staff : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _st_id;
+		
+		private string _st_name;
+		
+		private string _st_username;
+		
+		private string _st_password;
+		
+		private string _st_phone1;
+		
+		private string _st_phone2;
+		
+		private byte _st_role;
+		
+		private byte _st_status;
+		
+		private System.Data.Linq.Binary _st_image;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onst_idChanging(int value);
+    partial void Onst_idChanged();
+    partial void Onst_nameChanging(string value);
+    partial void Onst_nameChanged();
+    partial void Onst_usernameChanging(string value);
+    partial void Onst_usernameChanged();
+    partial void Onst_passwordChanging(string value);
+    partial void Onst_passwordChanged();
+    partial void Onst_phone1Changing(string value);
+    partial void Onst_phone1Changed();
+    partial void Onst_phone2Changing(string value);
+    partial void Onst_phone2Changed();
+    partial void Onst_roleChanging(byte value);
+    partial void Onst_roleChanged();
+    partial void Onst_statusChanging(byte value);
+    partial void Onst_statusChanged();
+    partial void Onst_imageChanging(System.Data.Linq.Binary value);
+    partial void Onst_imageChanged();
+    #endregion
+		
+		public staff()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int st_id
+		{
+			get
+			{
+				return this._st_id;
+			}
+			set
+			{
+				if ((this._st_id != value))
+				{
+					this.Onst_idChanging(value);
+					this.SendPropertyChanging();
+					this._st_id = value;
+					this.SendPropertyChanged("st_id");
+					this.Onst_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string st_name
+		{
+			get
+			{
+				return this._st_name;
+			}
+			set
+			{
+				if ((this._st_name != value))
+				{
+					this.Onst_nameChanging(value);
+					this.SendPropertyChanging();
+					this._st_name = value;
+					this.SendPropertyChanged("st_name");
+					this.Onst_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_username", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string st_username
+		{
+			get
+			{
+				return this._st_username;
+			}
+			set
+			{
+				if ((this._st_username != value))
+				{
+					this.Onst_usernameChanging(value);
+					this.SendPropertyChanging();
+					this._st_username = value;
+					this.SendPropertyChanged("st_username");
+					this.Onst_usernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_password", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string st_password
+		{
+			get
+			{
+				return this._st_password;
+			}
+			set
+			{
+				if ((this._st_password != value))
+				{
+					this.Onst_passwordChanging(value);
+					this.SendPropertyChanging();
+					this._st_password = value;
+					this.SendPropertyChanged("st_password");
+					this.Onst_passwordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_phone1", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string st_phone1
+		{
+			get
+			{
+				return this._st_phone1;
+			}
+			set
+			{
+				if ((this._st_phone1 != value))
+				{
+					this.Onst_phone1Changing(value);
+					this.SendPropertyChanging();
+					this._st_phone1 = value;
+					this.SendPropertyChanged("st_phone1");
+					this.Onst_phone1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_phone2", DbType="VarChar(50)")]
+		public string st_phone2
+		{
+			get
+			{
+				return this._st_phone2;
+			}
+			set
+			{
+				if ((this._st_phone2 != value))
+				{
+					this.Onst_phone2Changing(value);
+					this.SendPropertyChanging();
+					this._st_phone2 = value;
+					this.SendPropertyChanged("st_phone2");
+					this.Onst_phone2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_role", DbType="TinyInt NOT NULL")]
+		public byte st_role
+		{
+			get
+			{
+				return this._st_role;
+			}
+			set
+			{
+				if ((this._st_role != value))
+				{
+					this.Onst_roleChanging(value);
+					this.SendPropertyChanging();
+					this._st_role = value;
+					this.SendPropertyChanged("st_role");
+					this.Onst_roleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_status", DbType="TinyInt NOT NULL")]
+		public byte st_status
+		{
+			get
+			{
+				return this._st_status;
+			}
+			set
+			{
+				if ((this._st_status != value))
+				{
+					this.Onst_statusChanging(value);
+					this.SendPropertyChanging();
+					this._st_status = value;
+					this.SendPropertyChanged("st_status");
+					this.Onst_statusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_st_image", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary st_image
+		{
+			get
+			{
+				return this._st_image;
+			}
+			set
+			{
+				if ((this._st_image != value))
+				{
+					this.Onst_imageChanging(value);
+					this.SendPropertyChanging();
+					this._st_image = value;
+					this.SendPropertyChanged("st_image");
+					this.Onst_imageChanged();
 				}
 			}
 		}

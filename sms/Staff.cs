@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace sms
         {
             InitializeComponent();
         }
-
+        myDBDataContext obj = new myDBDataContext();
         int edit = 0;
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace sms
             if (PasswordTxt.Text != cpassTxt.Text) { mismatchedErrorLabel.Visible = true; } else { mismatchedErrorLabel.Visible = false; }
             if (phoneTxt.Text == "") { phone1ErrorLabel.Visible = true; } else { phone1ErrorLabel.Visible = false; }
             if (roleCBTxt.SelectedIndex == -1) { roleErrorLabel.Visible = true; } else { roleErrorLabel.Visible = false; }
-            if (statusCBTxt.SelectedIndex == -1) { statusErrorLabel.Visible = true; } else { statusErrorLabel.Visible = false; }
+            if (statusDD.SelectedIndex == -1) { statusErrorLabel.Visible = true; } else { statusErrorLabel.Visible = false; }
             if (nameErrorLabel.Visible || usernameErrorLabel.Visible || passErrorLabel.Visible || cpassErrorLabel.Visible || mismatchedErrorLabel.Visible || phone1ErrorLabel.Visible ||roleErrorLabel.Visible || statusErrorLabel.Visible)
             {
                 MainClass.showMSG("Fields with * are mandatory.", "Stop", "Error");
@@ -57,7 +59,21 @@ namespace sms
                 //Code for SAVE Operation
                 if (edit == 0)
                 {
-
+                    if (imagePathTxt.Text == "")
+                    {
+                        byte stat = statusDD.SelectedIndex == 0 ? Convert.ToByte(1) : Convert.ToByte(0);
+                        obj.st_insertStaffWithOutImage(nameTxt.Text, usernameTxt.Text, usernameTxt.Text, phoneTxt.Text, phone2Txt.Text,Convert.ToByte(roleCBTxt.SelectedValue.ToString()),stat);
+                        MainClass.showMSG(nameTxt.Text + " added successfully to the system", "Success", "Success");
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream();
+                        i.Save(ms, ImageFormat.Jpeg);
+                        byte[] arr = ms.ToArray();
+                        byte stat = statusDD.SelectedIndex == 0 ? Convert.ToByte(1) : Convert.ToByte(0);
+                        obj.st_insertStaff(nameTxt.Text, usernameTxt.Text, usernameTxt.Text, phoneTxt.Text, phone2Txt.Text, Convert.ToInt32(roleCBTxt.SelectedValue.ToString()), stat, arr);
+                        MainClass.showMSG(nameTxt.Text + " added successfully to the system", "Success", "Success");
+                    }
                 }
                 //Code for UPDATE Operation
                 else if (edit == 1)
@@ -114,14 +130,14 @@ namespace sms
 
         private void statusCBTxt_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (statusCBTxt.SelectedIndex == -1) { statusErrorLabel.Visible = true; } else { statusErrorLabel.Visible = false; }
+            if (statusDD.SelectedIndex == -1) { statusErrorLabel.Visible = true; } else { statusErrorLabel.Visible = false; }
         }
 
         private void cpassTxt_Validating(object sender, CancelEventArgs e)
         {
             if (PasswordTxt.Text != cpassTxt.Text) { mismatchedErrorLabel.Visible = true; } else { mismatchedErrorLabel.Visible = false; }
         }
-
+        Image i;
         private void BrowseBtn_Click(object sender, EventArgs e)
         {
             DialogResult dr = openFileDialog1.ShowDialog();
