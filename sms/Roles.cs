@@ -17,6 +17,15 @@ namespace sms
             InitializeComponent();
         }
         myDBDataContext obj = new myDBDataContext();
+        private void searchData()
+        {
+            //Code for serial number is yet remaining
+            var abc = obj.st_searcHRoles(searchTxt.Text);
+            rolesIDGV.DataPropertyName = "ID";
+            roleGV.DataPropertyName = "Role";
+            statusGV.DataPropertyName = "Status";
+            dataGridView1.DataSource = abc;
+        }
         int edit = 0;
         private void roleTxt_TextChanged(object sender, EventArgs e)
         {
@@ -130,16 +139,7 @@ namespace sms
             roleGV.DataPropertyName = "Role";
             statusGV.DataPropertyName = "Status";
             dataGridView1.DataSource = abc;
-        }
-
-        private void searchData()
-        {
-            //Code for serial number is yet remaining
-            var abc = obj.st_searcHRoles(searchTxt.Text);
-            rolesIDGV.DataPropertyName = "ID";
-            roleGV.DataPropertyName = "Role";
-            statusGV.DataPropertyName = "Status";
-            dataGridView1.DataSource = abc;
+            MainClass.sno(dataGridView1, "snoGV");
         }
         private void Roles_Load(object sender, EventArgs e)
         {

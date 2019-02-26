@@ -67,12 +67,15 @@ namespace sms
                     }
                     else
                     {
+                        /*
                         MemoryStream ms = new MemoryStream();
                         i.Save(ms, ImageFormat.Jpeg);
                         byte[] arr = ms.ToArray();
                         byte stat = statusDD.SelectedIndex == 0 ? Convert.ToByte(1) : Convert.ToByte(0);
-                        obj.st_insertStaff(nameTxt.Text, usernameTxt.Text, usernameTxt.Text, phoneTxt.Text, phone2Txt.Text, Convert.ToInt32(roleCBTxt.SelectedValue.ToString()), stat, arr);
+                        string rol = Convert.ToInt32(roleCBTxt.SelectedValue.ToString());
+                        obj.st_insertStaff(nameTxt.Text, usernameTxt.Text, usernameTxt.Text, phoneTxt.Text, phone2Txt.Text, rol, stat, arr);
                         MainClass.showMSG(nameTxt.Text + " added successfully to the system", "Success", "Success");
+                        */
                     }
                 }
                 //Code for UPDATE Operation
@@ -153,6 +156,11 @@ namespace sms
         private void Staff_Load(object sender, EventArgs e)
         {
             MainClass.disable_reset(panel6);
+        }
+
+        private void searchTxt_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

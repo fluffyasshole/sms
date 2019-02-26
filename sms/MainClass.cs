@@ -223,5 +223,14 @@ namespace sms
                 }
             }
         }
+        public static void sno(DataGridView gv, string colname)
+        {
+            int count = 0;
+            foreach (DataGridViewRow row in gv.Rows)
+            {
+                count++;
+                row.Cells[colname].Value = count;
+            }
+        }
     }
 }
